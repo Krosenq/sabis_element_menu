@@ -20,7 +20,7 @@ root = Tk()
 root.winfo_toplevel().title("Meny Sabis/Bilia, ")
 
 #Sabis
-label_menu = Label(root, text = crawler.weekday_string() + '\n==================\n\n Dagens lunch, SABIS\n ')
+label_menu = Label(root, text = "\n" + crawler.weekday_string() + '\n==================\n\n Dagens lunch, SABIS\n ')
 label_menu.config(font=("Arial", 16))
 label_menu.pack()
 

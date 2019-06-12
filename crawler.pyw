@@ -31,8 +31,7 @@ def request_data(url, selector):
     return daily_menus
 
 def day_menu(daily_menus):
-    # weekday = today_string()
-    weekday = 3
+    weekday = today_string()
     dishes = [dish.text.strip() for dish in daily_menus[weekday].select(".lunch-dish-description")]
     
     for i, dish in enumerate(dishes):
@@ -52,5 +51,5 @@ def bila_menu(daily_menus):
     return dishes
 
 def render_string(dishes_list):
-    output_string = "".join([" "*2 + dish + " "*2  + "\n\n" for dish in dishes_list])
+    output_string = "".join([" "*10 + dish + " "*10  + "\n\n" for dish in dishes_list])
     return output_string
